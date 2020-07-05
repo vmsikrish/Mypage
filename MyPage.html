@@ -1,0 +1,347 @@
+<style>
+body{
+ background: black;
+}
+
+#navbar{
+  width:99%;
+  background-color:#e3e3e3;
+  position:fixed;
+  border-style: groove;
+}
+
+#navbar a{
+  float:right;
+  margin:auto%;
+  color:#050605;
+  padding:8px;
+  text-decoration:none;
+  font-size:20px;
+  margin-right:1.5em;
+  margin-bottom:0.5em;
+  border-style: groove;
+  border-radius:4px;
+  border-width: thin;
+}
+
+#navbar a:hover{
+  background:#ffffff;
+}
+
+#welcome-section{
+  height:100vh;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  justify-content:center;
+  background-color:#ff4653;
+}
+
+#welcome-section img {
+  height:20vh;
+  border-radius:50%;
+  box-shadow:5px 5px 7px rgba(0, 0, 0, 0.5);
+}
+
+h1{
+  font-size:20px;
+  color:white;
+  font-family:Arial;
+  font-weight:normal;
+ margin-bottom: auto;
+}
+
+#welcome-section p{
+  text-align:center;
+  font-size:36px;
+  color:white;
+  opacity: 0.5;
+  font-family:Arial Italic;
+  font-weight:normal;
+  margin-top: auto;
+}
+
+#projects{
+    background-color:#c89666;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+}
+
+#projects .project-header {
+  font-size:50px;
+  color:white;
+  margin:0 auto;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-family:Arial;
+  font-weight:normal;
+}
+
+#projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap:2rem;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+
+}
+
+.projects-grid {
+    grid-template-columns: 1fr;
+
+}
+
+.project-screenshot{
+width:400; 
+height:350;
+}
+
+#projects .project-tile {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:0.5em;
+  margin-bottom:1.5em;
+  width:400px;
+  background-color:#102333;
+  text-decoration:none;
+  font-size:30px;
+  color:white;
+  border-radius:4px;
+
+}
+
+.project-tile:hover{
+ box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5);
+}
+
+.btn-show-all {
+  color:white;
+  display:block;
+  margin:auto;
+  width:100px;
+  padding:12px;
+  font-size:20px;
+  border-radius:5px;
+  background-color:#102333;
+  text-decoration:none;
+  margin-bottom:1.5em;
+  transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+ background: #00e461;
+}
+
+.btn-show-all:hover > i {
+  transform: translateX(2px);
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+#contact-section{
+  height:80vh;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  justify-content:center;
+  background-color:#5a7670;
+}
+ .contact-section  a{
+   font-size:30px;
+   text-decoration:none;
+   margin-left:1.5em;
+   margin-right:1.5em;
+   color:#ffffff;
+   border-radius:8px;  
+} 
+
+.contact-section a .fa {
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:white;
+    line-height: 50px;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section a .fa:hover{
+    animation: bounce 0.18s infinite alternate;
+    background:#e0e0e0;
+}
+
+.contact-section h1{
+  font-family:Comic Sans MS;
+  font-size:50px;
+  color:white;
+  margin-bottom: auto;
+}
+
+.contact-section p{
+  color:white;
+  font-family:Comic Sans MS;
+  font-size:25px;
+  margin-top: auto;
+  margin-bottom:3em;
+}
+
+footer {
+    display: flex;
+    justify-content: start;
+    background:#173e43;
+}
+ footer p {
+  padding: 1rem;
+  color:white;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@media screen and (max-width:600px){
+  #navbar{
+    position:fixed;
+}
+}
+
+@media screen and (max-width:600px){
+#projects .project-header {
+  font-size:25px;
+}
+}
+
+@media screen and (max-width:600px){
+#navbar a{
+  padding:10px;
+  font-size:15px;
+}
+}
+
+@media screen and (max-width:600px){
+.project-screenshot{
+width:300; 
+height:250;
+}
+
+@media screen and (max-width:600px){
+#projects .project-tile {
+  width:300px;
+  font-size:25px;
+}
+}
+
+@media screen and (max-width:600px){
+.contact-section h1{
+  font-family:Comic Sans MS;
+  font-size:30px;
+}
+}
+
+@media screen and (max-width:600px){
+.contact-section p{
+  font-family:Comic Sans MS;
+  font-size:23px;
+}
+}
+
+</style>
+<head>
+ <title>freecodecamp challenges </title>
+<link rel = "icon"  size="300%" href = "https://cdn.rawgit.com/Deftwun/e3756a8b518cbb354425/raw/6584db8babd6cbc4ecb35ed36f0d184a506b979e/free-code-camp-logo.svg" type = "image/x-icon"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<div class="navv">
+<nav id="navbar">
+    <ul>
+        <a id="link1" class="nav-link" href="#contact-section">Contact</a>
+      <a id="link1" class="nav-link" href="#projects">My Projects</a>
+ <a id="link1" class="nav-link" href="#welcome-section">About</a>
+    </ul>
+  </nav>
+</div>
+
+<section id="welcome-section">
+<div class="welcome-text">
+<img src="https://media.giphy.com/media/Cmr1OMJ2FN0B2/giphy.gif" alt="animated" />
+    <h1>Hey I am VamshiKrishna</h1>
+    <p>a web developer</p>
+  </div>
+</section>
+
+<section id ="projects">
+    <h2 class="project-header">These are some of my projects</h2>
+    <div class="project-grid">
+
+<a href="https://codepen.io/vmsikrish/pen/abddJXG" target="_blank" class="project-tile">
+<img src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/tribute.jpg" alt="" class="project-screenshot">
+<p class="code">Tribute Page</p>
+</a>
+
+<a href="https://codepen.io/vmsikrish/pen/dyGGZNO" target="_blank" class="project-tile">
+<img src="https://image.freepik.com/free-vector/man-computer-filling-online-questionnaire-form-survey-vector-flat-concept-feedback-questionnaire-online-survey-report-illustration_53562-6152.jpg
+" alt="" class="project-screenshot">
+<p class="code">Survey Form</p>
+</a>
+
+<a href="https://codepen.io/vmsikrish/pen/poggXpY" target="_blank" class="project-tile">
+<img src="https://divilife.com/wp-content/uploads/2018/10/product-landing-page-layout-for-divi.jpg" alt="" class="project-screenshot">
+<p class="code">Product Landing Page</p>
+</a>
+
+<a href="https://codepen.io/vmsikrish/pen/RwraYjB" target="_blank" class="project-tile">
+<img src="https://clipartstation.com/wp-content/uploads/2017/11/reference-clipart-8.jpg" alt="" class="project-screenshot">
+<p class="code">Technical Documentation Page</p>
+</a>
+
+<a href="https://codepen.io/vmsikrish/pen/OJMXXXp?editors=1100" target="_blank" class="project-tile">
+<img src="https://cdn.shopify.com/s/files/1/0613/3489/products/BH_6x8Album_AllAboutMe_FEATURED_1024x1024.jpg?v=1456245142" alt="" class="project-screenshot">
+<p class="code">Personal Portfolio Webpage</p>
+</a>
+</div>
+
+<a href="https://codepen.io/vmsikrish/pens/public" class="btn-show-all" target="_blank">Show all</a>
+</section>
+
+
+<section id="contact-section">
+<div class="contact-section" id="contact">
+<h1>Let's work together...</h2>
+<p>Iam still learning.<p>
+<a id="profile-link" href="https://www.freecodecamp.org/learn/" style="color:green;" target="_blank" class="contact-link"><i class="fa fa-free-code-camp"></i></a>
+
+<a id="profile-link" href="https://codepen.io/vmsikrish" style="color:black;" target="_blank" class="contact-link"><i  class="fa fa-codepen"></i></a>
+
+<a id="profile-link" href="https://www.facebook.com/vamshibunty.bunty" style="color:rgb(59, 89, 152);" target="_blank" class="contact-link"><i class="fa fa-facebook" ></i></a>
+
+<a id="profile-link" href="https://www.instagram.com/imvkrishna/?hl=en" style="color:e4405f;" target="_blank" class="contact-link"><i class="fa fa-instagram" ></i></a>
+
+<a href="https://twitter.com/imVkrishna4" style="color:rgb(85, 172, 238);" target="_blank" class="contact-link" ><i class="fa fa-twitter"></i></a>
+
+</div>
+</section>
+
+<footer>
+    <p>This is vmsi's portfolio</p>
+    <p>Created for freeCodeCamp <i class="fa fa-free-code-camp"></i></p>
+</footer>
